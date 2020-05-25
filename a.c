@@ -10,9 +10,10 @@ int main(){
 			printf("a[%d]: %p\n", i, a[i]);
 			for(int k = 0; k < 4; k++){
 					a[i][k] = (int*)malloc(sizeof(int)*5);
+					printf("a[%d][%d] %p\n", i, k, a[i][k]);
 					for(int l = 0; l < 5; l++){
 							  a[i][k][l] = i*100 + k*10 + l;
-							  printf("%d\n", a[i][k][l]);
+							  printf("a[%d][%d][%d] %p %d\n", i, k, l, &(a[i][k][l]), a[i][k][l]);
 					}
 			}
 		}
