@@ -2,13 +2,21 @@
 #include <stdlib.h>
 
 int main(){
-/*		  int ***a = (int***)malloc(sizeof(int**)*3);
+		  int ***a = (int***)malloc(sizeof(int**)*3);
 		  printf("a: %p\n", a);
-  */    
-		/*for(int i = 0; i < 3; i++){
+      
+		for(int i = 0; i < 3; i++){
 				  a[i] = (int**)malloc(sizeof(int*)*4);	
-			printf("a[%d]: %p\n", i, a[i]);	
-		}*/
+			printf("a[%d]: %p\n", i, a[i]);
+			for(int k = 0; k < 4; k++){
+					a[i][k] = (int*)malloc(sizeof(int)*5);
+					for(int l = 0; l < 5; l++){
+							  a[i][k][l] = i*100 + k*10 + l;
+							  printf("%d\n", a[i][k][l]);
+					}
+			}
+		}
+		  
 /*		int x[3][4];
 		for(int i = 0; i < 3; i++)
 				  for (int k = 0; k < 4; k++)
